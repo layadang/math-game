@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <p> hi welcome to da game </p>
+    <p> {{first_number}} + {{second_number}} = </p>
+    <form method="post">
+        <input name="ans" id="ans"> 
+    </form>
+
+    {% if result == True %}
+        <p> correct! </p>
+    {% elif result == False %}
+        <p> try again </p>
+    {% else %}
+        <p> go baddie </p>
+    {% endif %}
+
+
+</body>
+</html>
